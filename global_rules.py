@@ -1,16 +1,8 @@
-def run(data, bot_info, send):
+bot_info = [cfb574a311ea1e684d2c812336, Tester bot]
 
-    help_message = "Help:\n.help  -->  This screen\n.test  -->  Try it!\nOtherwise, repeats your message."
 
-    message = data['text']
 
-    if message == '.help':
-        send(help_message, bot_info[0])
-        return True
-
-    if message == '.test':
-        send("Hi there! Your bot is working, you should start customizing it now.", bot_info[0])
-        return True
-
-    send("Hi {}! You said: {}".format(data['name'], data['text']), bot_info[0])
-    return True
+def run(data, bot_info, send_message):
+    if data['text'] == 'nice':
+      send_message('Nice', bot_info[0])
+      return True
